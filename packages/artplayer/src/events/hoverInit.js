@@ -6,11 +6,9 @@ export default function hoverInit(art, events) {
     events.hover(
         $player,
         () => {
-            addClass($player, 'art-hover');
             art.emit('hover', true);
         },
         () => {
-            removeClass($player, 'art-hover');
             art.emit('hover', false);
         },
     );
